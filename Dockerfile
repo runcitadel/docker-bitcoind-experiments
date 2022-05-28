@@ -20,7 +20,7 @@ FROM alpine:${VER_ALPINE} AS preparer
 RUN apk add --no-cache git
 
 # Fetch the source code at a specific TAG
-RUN git clone  -b "backport/22/perf/faster-getblock"  --depth=1  https://github.com/AaronDewesbitcoin.git  "/bitcoin/"
+RUN git clone  -b "backport/22/perf/faster-getblock"  --depth=1  https://github.com/AaronDewes/bitcoin.git  "/bitcoin/"
 
 FROM ghcr.io/runcitadel/berkeleydb:main AS berkeleydb
 
